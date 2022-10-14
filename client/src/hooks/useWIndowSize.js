@@ -1,9 +1,9 @@
-import { useEffect } from "react"
+import { useEffect, useState } from "react"
 
-export function usaWindowSize() {
+export function useWindowSize() {
   const [windowSize, setWindowSize] = useState({
-    height: undefined,
-    width: undefined
+    height: window.innerHeight,
+    width: window.innerWidth
   })
 
   useEffect(() => {

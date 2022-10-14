@@ -1,6 +1,7 @@
 import { useMemo, useState } from "react"
-import { useWindowSize } from "../hooks/useWIndowSize"
+import { useWindowSize } from "../hooks/useWindowSize"
 import api from "../services/api"
+import CardsList from "../components/CardsList"
 
 export default function Home() {
   const [users, setUsers] = useState([])
@@ -43,8 +44,14 @@ export default function Home() {
   }, [usersPerRow, users])
 
   return (
-    <>
-      
-    </>
+    <CardsList 
+      rows={userRows}
+      hasNextPage={nextPage}
+      isNextPageLoading={isLoading}
+      loadNextPage={loadNextPage}
+      columnsQnt={usersPerRow}
+      listHeight={listHeight}
+      rowHeight={listRowHeight}
+    />
   )
 }
