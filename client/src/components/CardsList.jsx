@@ -73,7 +73,11 @@ const Row = memo(({data, index, style, isScrolling}) => {
               key={user.id}
               color={getBackgroundColorByNucleo(user.department)}
               picture={user.picture}
-              name={user.name}
+              name={
+                user.name.split(' ')[0].length > 10 
+                  ? user.name.split(' ')[0].slice(0, 10) + "..."
+                  : user.name.split(' ')[0]
+              }
               userId={user.id}
             />
           ))}
