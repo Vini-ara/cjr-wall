@@ -1,5 +1,5 @@
 import { useMemo, useState } from "react"
-import { useWindowSize } from "../hooks/useWindowSize"
+import { useWindowSize } from "../hooks/useWIndowSize"
 import api from "../services/api"
 import CardsList from "../components/CardsList"
 

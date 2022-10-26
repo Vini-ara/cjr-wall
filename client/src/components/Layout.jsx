@@ -10,7 +10,7 @@ export default function Layout() {
   return (
     <>
       <header className="h-12 p-[.5%] bg-[#DEDEDE] flex items-center justify-between w-[100%]">
-        <Link>
+        <Link to="/">
           <img src={logo} className="h-9 w-auto"/>
         </Link>
         {user === null ? (

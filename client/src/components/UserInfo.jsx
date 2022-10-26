@@ -14,10 +14,10 @@ export function UserInfo() {
   }
 
   return (
-    <div>
-      <Link to="profile" className="flex items-center space-x-4">
+    <div className="flex items-center space-x-4">
+      <Link to="profile" className="flex items-center gap-2" >
         <img src={user.picture} alt={`Foto de ${user.name}`} className="w-8 h-8 rounded-full"/>
-        <p className="font-normal text-slate-900 hidden sm:black">{name}</p>
+        <p className="font-normal text-slate-900 sm:black">{name}</p>
       </Link> 
       <button 
         type="button"

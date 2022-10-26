@@ -7,6 +7,7 @@ export function useGoogleAuth(ref, callback = () => {}) {
         callback(response);
       }
 
+      console.log(import.meta.env.VITE_CLIENT_ID)
       google.accounts.id.initialize({
         client_id: import.meta.env.VITE_CLIENT_ID,
         callback: handleCallbackResponse
